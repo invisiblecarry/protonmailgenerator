@@ -45,7 +45,9 @@ def get_mail():
             kernel32.GlobalUnlock(data_locked)
             match = re.search(r'[\w.+-]+@[\w-]+\.[\w.-]+', str(value))
             if match is not None:
-                return str(match.group(0))
+                adress = str(match.group(0))
+                if "@dropmail.me" in adress:
+                    return adress
             return False
     finally:
         user32.CloseClipboard()
@@ -127,20 +129,19 @@ while True:
     pyautogui.keyDown('ctrlleft'); pyautogui.typewrite('c'); pyautogui.keyUp('ctrlleft')
     newMail = get_mail()
     if newMail:
-        print("10 min mail: " + newMail)
-    break
+        print("10 min mail: " + newMail[1:])
+        break
 
 pyautogui.keyDown('ctrlleft'); pyautogui.keyDown('shiftleft'); pyautogui.typewrite('\t'); pyautogui.keyUp('ctrlleft'); pyautogui.keyUp('shiftleft')
 time.sleep(1)
 #pyautogui.typewrite(newMail)
-print(newMail)
-pyautogui.typewrite(newMail)
+pyautogui.typewrite(newMail[1:])
 pyautogui.typewrite('\n')
 
 time.sleep(10)
 
 pyautogui.keyDown('ctrlleft');  pyautogui.typewrite('\t'); pyautogui.keyUp('ctrlleft')
-time.sleep(1)
+time.sleep(30)
 
 #pyautogui.typewrite('\t\t\t\t\t\t\t\t\t\t\t\t\t\n')
 
@@ -151,7 +152,7 @@ pyautogui.keyDown('ctrlleft');  pyautogui.typewrite('a'); pyautogui.keyUp('ctrll
 pyautogui.keyDown('ctrlleft'); pyautogui.typewrite('c'); pyautogui.keyUp('ctrlleft')
 
 
-pyautogui.keyDown('ctrlleft');  pyautogui.typewrite('\t'); pyautogui.keyUp('ctrlleft')
+pyautogui.keyDown('ctrlleft'); pyautogui.keyDown('shiftleft'); pyautogui.typewrite('\t'); pyautogui.keyUp('ctrlleft'); pyautogui.keyUp('shiftleft')
 time.sleep(5)
 pyautogui.typewrite(str(get_clip6digit()) + '\n')
 
