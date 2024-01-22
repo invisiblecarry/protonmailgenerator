@@ -128,8 +128,8 @@ while True:
     pyautogui.typewrite('\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t')#28
     pyautogui.keyDown('ctrlleft')
     pyautogui.keyDown('shiftleft')
-    pyautogui.keyDown('shiftright')
     pyautogui.press('down')
+    pyautogui.keyDown('shiftright')                                                                                                                                                                                                                             
     pyautogui.keyUp('shiftleft')
     pyautogui.keyUp('shiftright')
     pyautogui.keyUp('ctrlleft')
