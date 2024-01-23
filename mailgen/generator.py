@@ -104,12 +104,13 @@ if __name__ == "__main__":
     pyautogui.keyDown('ctrlleft')
     pyautogui.keyDown('shift')
     pyautogui.typewrite('p')
+    time.sleep(5)
     pyautogui.keyUp('ctrlleft')
     pyautogui.keyUp('shift')
     pyautogui.typewrite('https://account.proton.me/signup?plan=free\n')
-    time.sleep(5)
+    time.sleep(6)
     # Username
-    _username_ = randomize('-s', 5)+randomize('-s', 5)+randomize('-s', 5)
+    _username_ = randomize('-s', 3)+randomize('-s', 3)+randomize('-s', 3)
     pyautogui.typewrite(_username_ + '\t\t\t')
     print("Username:" + _username_)
 
