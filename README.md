@@ -1,5 +1,7 @@
 # protonMailGenerator
 A E-Mail Generator
+# ---------------------------------------------------------------------------------------------------------------
+# -----Attention !!! Before runing this script switch your language(keyboard layout to English) to EN---------------
 
 
 ## WHAT MAKES THIS BETTER

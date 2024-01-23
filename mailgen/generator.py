@@ -20,6 +20,11 @@ kernel32.GlobalUnlock.argtypes = [ctypes.c_void_p]  # Set argument type for Glob
 user32 = ctypes.windll.user32  # Load user32.dll for user interface functions.
 user32.GetClipboardData.restype = ctypes.c_void_p  # Set return type of GetClipboardData to void pointer.
 
+"""---------------------------------------------------------------------------------------------------------------
+-----Attention !!! Before runing this script switch your language(keyboard layout to English) to EN---------------
+------------------------------------------------------------------------------------------------------------------
+"""
+
 
 def get_clip6digit() -> str:
     user32.OpenClipboard(0)
