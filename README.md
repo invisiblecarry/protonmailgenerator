@@ -35,6 +35,3 @@ clicking the launch.cmd
 be sure to click nothing while the script is running otherwise you could interfere with it!
 when finished you can find the mail and password in the accLog.txt
 enjoy!
-
-#### EXCUSES:
-My first python code ever kinda bad but it works. Rn I am working on a selenium version of this because using the webbrowser and pyautogui is really bad for this usecase ig.
